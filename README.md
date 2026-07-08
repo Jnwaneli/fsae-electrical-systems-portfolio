@@ -23,6 +23,18 @@ My primary individual work was the **paddle-shifting system**. I was also **heav
 
 ---
 
+## What to Look At
+
+- `firmware/paddle_shift_controller.ino` - Arduino paddle-shift control logic, including shift routines, debounce handling, clutch gating, timing lockouts, and actuator feedback.
+- `docs/Full_Electrical_Schematic_2_0.pdf` - Full vehicle electrical schematic and harness mapout.
+- `docs/FSAE_2026_Final_Report_04_29_2026.pdf` - Senior design report with vehicle-level project context.
+- `assets/selected_report_excerpts/final_harness_mapout.png` - Final harness documentation figure.
+- `assets/selected_report_excerpts/paddle_shift_schematic.png` - Paddle-shifting subsystem schematic.
+- `assets/selected_report_excerpts/ignition_system_circuit.png` - Ignition-system circuit implementation.
+- `assets/selected_report_excerpts/emergency_shutdown_circuit.png` - Shutdown and safety circuit documentation.
+
+---
+
 ## Project Status
 
 This repository documents the work completed during the 2026 Formula SAE senior design cycle. At the time of documentation, the electrical system was approximately **90% complete**. Remaining work mainly involved mounting a few harness-related components and completing final vehicle-level installation and testing.
