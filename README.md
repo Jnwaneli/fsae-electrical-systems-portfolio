@@ -17,30 +17,31 @@ The electrical work included ECU/ECM connections, ignition and starter behavior,
 
 My primary individual work was the **paddle-shifting system**. I was also **heavily involved in ignition-system debugging/implementation**, and I contributed to the broader **harness installation and vehicle electrical integration** work with the electrical team.
 
+![ORU Formula SAE Project Lazarus car](assets/selected_report_excerpts/team_or_car_photo.png)
+
+*Figure 1. ORU Formula SAE Project Lazarus vehicle during the 2026 senior design cycle.*
+
 ### Primary Contribution — Paddle-Shifting System
+
+![Full paddle-shift system](assets/selected_report_excerpts/paddle_shift_full_system.jpg)
+
+*Figure 2. Full paddle-shifting control system used during integration and bench testing, showing the controller enclosure, Arduino-based electronics, power-conversion and motor-driver hardware, wiring, and linear actuator.*
 
 The paddle-shifting system was one of my largest individual contributions to Project Lazarus. I designed and developed the Arduino-based control system that converts steering-wheel up-shift and down-shift commands into bidirectional movement of a linear actuator through an H-bridge motor driver. The hardware stack combines an Arduino Uno, 12 V-to-5 V buck converter, H-bridge, clutch input, actuator position feedback, fuse protection, and vehicle wiring.
 
 The firmware handles upshift, downshift, and neutral routines; paddle-input debounce; clutch gating; post-shift lockout timing; actuator position targets; movement timeout protection; and return-to-neutral behavior after each shift. This subsystem brought together embedded control, power conversion, actuator control, driver inputs, feedback, and vehicle-level electrical integration in one complete system.
-
-![Steering wheel with integrated paddle shifters](assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg)
-
-*Featured paddle-shift hardware view. Steering-wheel assembly with the integrated up-shift and down-shift paddles that provide the driver inputs to the Arduino-based actuator control system.*
-
-![Team or car photo](assets/selected_report_excerpts/team_or_car_photo.png)
-
-*Figure 1. ORU Formula SAE Project Lazarus team/car context.*
 
 ---
 
 ## What to Look At
 
 - `firmware/paddle_shift_controller.ino` - Arduino paddle-shift control logic, including shift routines, debounce handling, clutch gating, timing lockouts, and actuator feedback.
-- `assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg` - Steering-wheel assembly with integrated shift paddles and driver inputs.
+- `assets/selected_report_excerpts/paddle_shift_full_system.jpg` - Full integrated paddle-shift controller, wiring, power electronics, and linear actuator hardware.
 - `docs/Full_Electrical_Schematic_2_0.pdf` - Full vehicle electrical schematic and harness mapout.
 - `docs/FSAE_2026_Final_Report_04_29_2026.pdf` - Senior design report with vehicle-level project context.
 - `assets/selected_report_excerpts/final_harness_mapout.png` - Final harness documentation figure.
 - `assets/selected_report_excerpts/paddle_shift_schematic.png` - Paddle-shifting subsystem schematic.
+- `assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg` - Steering-wheel assembly with integrated shift paddles.
 - `assets/selected_report_excerpts/ignition_system_circuit.png` - Ignition-system circuit implementation.
 - `assets/selected_report_excerpts/emergency_shutdown_circuit.png` - Shutdown and safety circuit documentation.
 
@@ -122,7 +123,7 @@ The full schematic shows the integrated vehicle electrical system, including ECU
 
 ![Final harness mapout](assets/selected_report_excerpts/final_harness_mapout.png)
 
-*Figure 2. Final electrical harness mapout used to document major vehicle wiring paths and system connections.*
+*Figure 3. Final electrical harness mapout used to document major vehicle wiring paths and system connections.*
 
 ### Legacy Harness Context
 
@@ -130,7 +131,7 @@ The legacy harness was inherited from a previous team. It served as the starting
 
 ![Legacy harness](assets/selected_report_excerpts/legacy_harness.png)
 
-*Figure 3. Legacy GSX-R600 harness inherited from the previous team and used as the starting point for electrical-system analysis.*
+*Figure 4. Legacy GSX-R600 harness inherited from the previous team and used as the starting point for electrical-system analysis.*
 
 ### Physical Harness Installation
 
@@ -138,11 +139,11 @@ The physical harness screenshots show the vehicle-level wiring installation and 
 
 ![Physical harness side view](assets/selected_report_excerpts/phy_harness_sideview.png)
 
-*Figure 4. Physical harness installation side view during vehicle-level wiring integration.*
+*Figure 5. Physical harness installation side view during vehicle-level wiring integration.*
 
 ![Physical harness back view](assets/selected_report_excerpts/phy_harness_backview.png)
 
-*Figure 5. Physical harness installation rear/back view showing routing and integration progress.*
+*Figure 6. Physical harness installation rear/back view showing routing and integration progress.*
 
 ---
 
@@ -152,25 +153,31 @@ The paddle-shifting subsystem used an Arduino, H-bridge, buck converter, clutch 
 
 ![Paddle-shift schematic](assets/selected_report_excerpts/paddle_shift_schematic.png)
 
-*Figure 6. Paddle-shifting subsystem schematic showing Arduino inputs, clutch logic, H-bridge motor control, actuator feedback, and power conversion.*
+*Figure 7. Paddle-shifting subsystem schematic showing Arduino inputs, clutch logic, H-bridge motor control, actuator feedback, and power conversion.*
 
-### Paddle-Shift Hardware
+### Steering-Wheel Paddle Inputs
+
+![Steering wheel with paddle shifters](assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg)
+
+*Figure 8. Steering-wheel assembly with integrated paddle switches used to provide driver up-shift and down-shift inputs to the paddle-shifting controller.*
+
+### Paddle-Shift Hardware Components
 
 ![Arduino board](assets/selected_report_excerpts/arduino_board.png)
 
-*Figure 7. Arduino Uno used as the paddle-shift controller during the Formula SAE build.*
+*Figure 9. Arduino Uno used as the paddle-shift controller during the Formula SAE build.*
 
 ![H-bridge motor driver](assets/selected_report_excerpts/hbridge.png)
 
-*Figure 8. H-bridge motor driver used to control actuator extension and retraction.*
+*Figure 10. H-bridge motor driver used to control actuator extension and retraction.*
 
 ![Buck converter](assets/selected_report_excerpts/buck_converter.png)
 
-*Figure 9. Buck converter used to step vehicle 12 V power down for the paddle-shift control electronics.*
+*Figure 11. Buck converter used to step vehicle 12 V power down for the paddle-shift control electronics.*
 
 ![Linear actuator](assets/selected_report_excerpts/actuator.png)
 
-*Figure 10. Linear actuator used to mechanically command shifts through the paddle-shifting system.*
+*Figure 12. Linear actuator used to mechanically command shifts through the paddle-shifting system.*
 
 ### Firmware
 
@@ -184,29 +191,29 @@ The ignition-system work focused on adapting the original Suzuki ignition behavi
 
 ![OEM ignition](assets/selected_report_excerpts/oem_ignition.png)
 
-*Figure 11. OEM Suzuki ignition-switch reference used to understand the expected ECU ignition input behavior.*
+*Figure 13. OEM Suzuki ignition-switch reference used to understand the expected ECU ignition input behavior.*
 
 ![Ignition system circuit](assets/selected_report_excerpts/ignition_system_circuit.png)
 
-*Figure 12. Ignition-system circuit implementation used to adapt the motorcycle engine electronics to the FSAE vehicle.*
+*Figure 14. Ignition-system circuit implementation used to adapt the motorcycle engine electronics to the FSAE vehicle.*
 
 ![Resistance used to bypass ignition](assets/selected_report_excerpts/resistance_used_to_bypass_ignition.png)
 
-*Figure 13. Resistance value selected to reproduce the ignition-switch condition expected by the ECU.*
+*Figure 15. Resistance value selected to reproduce the ignition-switch condition expected by the ECU.*
 
 ![Ignition system relay](assets/selected_report_excerpts/ignition_system_relay.png)
 
-*Figure 14. Ignition-system relay arrangement used as part of the engine-start and ECU-recognition circuit.*
+*Figure 16. Ignition-system relay arrangement used as part of the engine-start and ECU-recognition circuit.*
 
 ### Starter and Ignition Support Circuits
 
 ![Starter and ignition switch](assets/selected_report_excerpts/starter_and_ignition_switch.png)
 
-*Figure 15. Starter and ignition-switch support circuit used for engine-start control.*
+*Figure 17. Starter and ignition-switch support circuit used for engine-start control.*
 
 ![Starter relay](assets/selected_report_excerpts/starter_relay.png)
 
-*Figure 16. Starter relay wiring used to control high-current starter operation from low-current driver inputs.*
+*Figure 18. Starter relay wiring used to control high-current starter operation from low-current driver inputs.*
 
 ---
 
@@ -216,11 +223,11 @@ The shutdown circuit includes the master kill switch, driver emergency kill swit
 
 ![Emergency shutdown circuit](assets/selected_report_excerpts/emergency_shutdown_circuit.png)
 
-*Figure 17. Emergency shutdown circuit showing safety devices, contactor path, fuse protection, and diode protection.*
+*Figure 19. Emergency shutdown circuit showing safety devices, contactor path, fuse protection, and diode protection.*
 
 ![Emergency shutdown circuit physical implementation](assets/selected_report_excerpts/emergency_shutdown_circuit_physical.png)
 
-*Figure 18. Physical emergency shutdown circuit implementation used during vehicle electrical integration.*
+*Figure 20. Physical emergency shutdown circuit implementation used during vehicle electrical integration.*
 
 ---
 
