@@ -17,6 +17,16 @@ The electrical work included ECU/ECM connections, ignition and starter behavior,
 
 My primary individual work was the **paddle-shifting system**. I was also **heavily involved in ignition-system debugging/implementation**, and I contributed to the broader **harness installation and vehicle electrical integration** work with the electrical team.
 
+### Primary Contribution — Paddle-Shifting System
+
+The paddle-shifting system was one of my largest individual contributions to Project Lazarus. I designed and developed the Arduino-based control system that converts steering-wheel up-shift and down-shift commands into bidirectional movement of a linear actuator through an H-bridge motor driver. The hardware stack combines an Arduino Uno, 12 V-to-5 V buck converter, H-bridge, clutch input, actuator position feedback, fuse protection, and vehicle wiring.
+
+The firmware handles upshift, downshift, and neutral routines; paddle-input debounce; clutch gating; post-shift lockout timing; actuator position targets; movement timeout protection; and return-to-neutral behavior after each shift. This subsystem brought together embedded control, power conversion, actuator control, driver inputs, feedback, and vehicle-level electrical integration in one complete system.
+
+![Full paddle-shift system](assets/selected_report_excerpts/paddle_shift_full_system.webp)
+
+*Featured hardware view. Full paddle-shift control assembly used during integration and bench testing, showing the controller enclosure, power-conversion electronics, Arduino, H-bridge wiring, and linear actuator.*
+
 ![Team or car photo](assets/selected_report_excerpts/team_or_car_photo.png)
 
 *Figure 1. ORU Formula SAE Project Lazarus team/car context.*
@@ -26,6 +36,7 @@ My primary individual work was the **paddle-shifting system**. I was also **heav
 ## What to Look At
 
 - `firmware/paddle_shift_controller.ino` - Arduino paddle-shift control logic, including shift routines, debounce handling, clutch gating, timing lockouts, and actuator feedback.
+- `assets/selected_report_excerpts/paddle_shift_full_system.webp` - Full integrated paddle-shift controller, wiring, power electronics, and linear actuator hardware.
 - `docs/Full_Electrical_Schematic_2_0.pdf` - Full vehicle electrical schematic and harness mapout.
 - `docs/FSAE_2026_Final_Report_04_29_2026.pdf` - Senior design report with vehicle-level project context.
 - `assets/selected_report_excerpts/final_harness_mapout.png` - Final harness documentation figure.
