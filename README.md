@@ -23,9 +23,9 @@ The paddle-shifting system was one of my largest individual contributions to Pro
 
 The firmware handles upshift, downshift, and neutral routines; paddle-input debounce; clutch gating; post-shift lockout timing; actuator position targets; movement timeout protection; and return-to-neutral behavior after each shift. This subsystem brought together embedded control, power conversion, actuator control, driver inputs, feedback, and vehicle-level electrical integration in one complete system.
 
-![Full paddle-shift system](assets/selected_report_excerpts/paddle_shift_full_system.webp)
+![Steering wheel with integrated paddle shifters](assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg)
 
-*Featured hardware view. Full paddle-shift control assembly used during integration and bench testing, showing the controller enclosure, power-conversion electronics, Arduino, H-bridge wiring, and linear actuator.*
+*Featured paddle-shift hardware view. Steering-wheel assembly with the integrated up-shift and down-shift paddles that provide the driver inputs to the Arduino-based actuator control system.*
 
 ![Team or car photo](assets/selected_report_excerpts/team_or_car_photo.png)
 
@@ -36,12 +36,11 @@ The firmware handles upshift, downshift, and neutral routines; paddle-input debo
 ## What to Look At
 
 - `firmware/paddle_shift_controller.ino` - Arduino paddle-shift control logic, including shift routines, debounce handling, clutch gating, timing lockouts, and actuator feedback.
-- `assets/selected_report_excerpts/paddle_shift_full_system.webp` - Full integrated paddle-shift controller, wiring, power electronics, and linear actuator hardware.
+- `assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg` - Steering-wheel assembly with integrated shift paddles and driver inputs.
 - `docs/Full_Electrical_Schematic_2_0.pdf` - Full vehicle electrical schematic and harness mapout.
 - `docs/FSAE_2026_Final_Report_04_29_2026.pdf` - Senior design report with vehicle-level project context.
 - `assets/selected_report_excerpts/final_harness_mapout.png` - Final harness documentation figure.
 - `assets/selected_report_excerpts/paddle_shift_schematic.png` - Paddle-shifting subsystem schematic.
-- `assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg` - Steering-wheel assembly with integrated shift paddles.
 - `assets/selected_report_excerpts/ignition_system_circuit.png` - Ignition-system circuit implementation.
 - `assets/selected_report_excerpts/emergency_shutdown_circuit.png` - Shutdown and safety circuit documentation.
 
@@ -155,27 +154,23 @@ The paddle-shifting subsystem used an Arduino, H-bridge, buck converter, clutch 
 
 *Figure 6. Paddle-shifting subsystem schematic showing Arduino inputs, clutch logic, H-bridge motor control, actuator feedback, and power conversion.*
 
-![Steering wheel with paddle shifters](assets/selected_report_excerpts/paddle_shift_steering_wheel.jpg)
-
-*Figure 7. Steering-wheel assembly with integrated paddle switches used to provide driver up-shift and down-shift inputs to the paddle-shifting controller.*
-
 ### Paddle-Shift Hardware
 
 ![Arduino board](assets/selected_report_excerpts/arduino_board.png)
 
-*Figure 8. Arduino Uno used as the paddle-shift controller during the Formula SAE build.*
+*Figure 7. Arduino Uno used as the paddle-shift controller during the Formula SAE build.*
 
 ![H-bridge motor driver](assets/selected_report_excerpts/hbridge.png)
 
-*Figure 9. H-bridge motor driver used to control actuator extension and retraction.*
+*Figure 8. H-bridge motor driver used to control actuator extension and retraction.*
 
 ![Buck converter](assets/selected_report_excerpts/buck_converter.png)
 
-*Figure 10. Buck converter used to step vehicle 12 V power down for the paddle-shift control electronics.*
+*Figure 9. Buck converter used to step vehicle 12 V power down for the paddle-shift control electronics.*
 
 ![Linear actuator](assets/selected_report_excerpts/actuator.png)
 
-*Figure 11. Linear actuator used to mechanically command shifts through the paddle-shifting system.*
+*Figure 10. Linear actuator used to mechanically command shifts through the paddle-shifting system.*
 
 ### Firmware
 
@@ -189,29 +184,29 @@ The ignition-system work focused on adapting the original Suzuki ignition behavi
 
 ![OEM ignition](assets/selected_report_excerpts/oem_ignition.png)
 
-*Figure 12. OEM Suzuki ignition-switch reference used to understand the expected ECU ignition input behavior.*
+*Figure 11. OEM Suzuki ignition-switch reference used to understand the expected ECU ignition input behavior.*
 
 ![Ignition system circuit](assets/selected_report_excerpts/ignition_system_circuit.png)
 
-*Figure 13. Ignition-system circuit implementation used to adapt the motorcycle engine electronics to the FSAE vehicle.*
+*Figure 12. Ignition-system circuit implementation used to adapt the motorcycle engine electronics to the FSAE vehicle.*
 
 ![Resistance used to bypass ignition](assets/selected_report_excerpts/resistance_used_to_bypass_ignition.png)
 
-*Figure 14. Resistance value selected to reproduce the ignition-switch condition expected by the ECU.*
+*Figure 13. Resistance value selected to reproduce the ignition-switch condition expected by the ECU.*
 
 ![Ignition system relay](assets/selected_report_excerpts/ignition_system_relay.png)
 
-*Figure 15. Ignition-system relay arrangement used as part of the engine-start and ECU-recognition circuit.*
+*Figure 14. Ignition-system relay arrangement used as part of the engine-start and ECU-recognition circuit.*
 
 ### Starter and Ignition Support Circuits
 
 ![Starter and ignition switch](assets/selected_report_excerpts/starter_and_ignition_switch.png)
 
-*Figure 16. Starter and ignition-switch support circuit used for engine-start control.*
+*Figure 15. Starter and ignition-switch support circuit used for engine-start control.*
 
 ![Starter relay](assets/selected_report_excerpts/starter_relay.png)
 
-*Figure 17. Starter relay wiring used to control high-current starter operation from low-current driver inputs.*
+*Figure 16. Starter relay wiring used to control high-current starter operation from low-current driver inputs.*
 
 ---
 
@@ -221,11 +216,11 @@ The shutdown circuit includes the master kill switch, driver emergency kill swit
 
 ![Emergency shutdown circuit](assets/selected_report_excerpts/emergency_shutdown_circuit.png)
 
-*Figure 18. Emergency shutdown circuit showing safety devices, contactor path, fuse protection, and diode protection.*
+*Figure 17. Emergency shutdown circuit showing safety devices, contactor path, fuse protection, and diode protection.*
 
 ![Emergency shutdown circuit physical implementation](assets/selected_report_excerpts/emergency_shutdown_circuit_physical.png)
 
-*Figure 19. Physical emergency shutdown circuit implementation used during vehicle electrical integration.*
+*Figure 18. Physical emergency shutdown circuit implementation used during vehicle electrical integration.*
 
 ---
 
