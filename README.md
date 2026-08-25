@@ -23,7 +23,7 @@ My primary individual work was the **paddle-shifting system**. I was also **heav
 
 ### Primary Contribution — Paddle-Shifting System
 
-![Full paddle-shift system](assets/selected_report_excerpts/paddle_shift_full_system.jpg)
+<img src="https://github.com/Jnwaneli/fsae-electrical-systems-portfolio/blob/main/assets/selected_report_excerpts/paddle_shift_full_system.jpg?raw=1" alt="Full paddle-shift system" width="100%" />
 
 *Figure 2. Full paddle-shifting control system used during integration and bench testing, showing the controller enclosure, Arduino-based electronics, power-conversion and motor-driver hardware, wiring, and linear actuator.*
 
