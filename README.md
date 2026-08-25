@@ -23,7 +23,7 @@ My primary individual work was the **paddle-shifting system**. I was also **heav
 
 ### Primary Contribution — Paddle-Shifting System
 
-<img src="https://github.com/Jnwaneli/fsae-electrical-systems-portfolio/blob/main/assets/selected_report_excerpts/paddle_shift_full_system.jpg?raw=1" alt="Full paddle-shift system" width="100%" />
+<img src="assets/selected_report_excerpts/paddle_shift_full_system.png" alt="Full paddle-shift system" width="100%" />
 
 *Figure 2. Full paddle-shifting control system used during integration and bench testing, showing the controller enclosure, Arduino-based electronics, power-conversion and motor-driver hardware, wiring, and linear actuator.*
 
@@ -36,7 +36,7 @@ The firmware handles upshift, downshift, and neutral routines; paddle-input debo
 ## What to Look At
 
 - `firmware/paddle_shift_controller.ino` - Arduino paddle-shift control logic, including shift routines, debounce handling, clutch gating, timing lockouts, and actuator feedback.
-- `assets/selected_report_excerpts/paddle_shift_full_system.jpg` - Full integrated paddle-shift controller, wiring, power electronics, and linear actuator hardware.
+- `assets/selected_report_excerpts/paddle_shift_full_system.png` - Full integrated paddle-shift controller, wiring, power electronics, and linear actuator hardware.
 - `docs/Full_Electrical_Schematic_2_0.pdf` - Full vehicle electrical schematic and harness mapout.
 - `docs/FSAE_2026_Final_Report_04_29_2026.pdf` - Senior design report with vehicle-level project context.
 - `assets/selected_report_excerpts/final_harness_mapout.png` - Final harness documentation figure.
